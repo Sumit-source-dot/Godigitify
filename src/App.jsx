@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.css'
-
+import HeroSection from './components/hero'
 function App() {
   return (
     <div>
-      <h1 className='bg-red-400'>Welcome to Godigitify</h1>
+     <HeroSection/>
     </div>
   )
 }
