@@ -154,8 +154,8 @@ const About = () => {
             <div className="absolute inset-0 rounded-2xl border-2 border-white/30 -z-10"></div>
             <motion.div 
               className="overflow-hidden rounded-2xl shadow-2xl border border-white/20"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: 'spring', stiffness: 400 }}
+              // whileHover={{ scale: 1.02 }}
+              // transition={{ type: 'spring', stiffness: 400 }}
             >
               <img 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
