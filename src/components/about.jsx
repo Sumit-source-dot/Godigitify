@@ -2,33 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiAward, FiUsers, FiCode, FiLayers, FiChevronRight } from 'react-icons/fi';
 
-const GridBackground = () => {
-  return (
-    <div className="absolute inset-0 overflow-hidden -z-10">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc] to-white opacity-90"></div>
-      <div className="absolute inset-0 grid grid-cols-12 grid-rows-12 gap-px">
-        {[...Array(144)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="bg-purple-50/30"
-            initial={{ opacity: 0.1 }}
-            animate={{ 
-              opacity: [0.1, 0.2, 0.1],
-              transition: { 
-                duration: 2 + Math.random() * 3,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                delay: Math.random() * 2
-              }
-            }}
-          />
-        ))}
-      </div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#00112d01_0%,#00112d03_70%)]"></div>
-    </div>
-  );
-};
-
 const About = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 40 },
@@ -54,11 +27,10 @@ const About = () => {
   };
 
   return (
-    <section className="relative py-28 overflow-hidden">
-      <GridBackground />
-      
+    <section className="relative bg-gradient-to-b from-[#f8fafc] to-white py-28 overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-[100px] opacity-10 -z-0"></div>
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-purple-50/80 to-transparent -z-0"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-[100px] opacity-20 -z-0"></div>
       <div className="absolute top-1/4 -left-40 w-80 h-80 bg-[#00112d]/5 rounded-full filter blur-[80px] -z-0"></div>
 
       <div className="container mx-auto px-5 max-w-6xl relative z-10">
@@ -71,10 +43,10 @@ const About = () => {
           className="text-center mb-24"
         >
           <motion.span 
-            className="inline-block bg-white text-purple-800 px-5 py-2 rounded-full text-sm font-medium mb-5 shadow-sm border border-gray-100 backdrop-blur-sm"
+            className="inline-block bg-gradient-to-r from-purple-100 to-purple-50 text-purple-800 px-5 py-2 rounded-full text-sm font-medium mb-5 shadow-sm border border-purple-100/50"
             whileHover={{ 
               y: -3,
-              boxShadow: '0 6px 16px -4px rgba(124, 58, 237, 0.15)'
+              boxShadow: '0 6px 16px -4px rgba(124, 58, 237, 0.2)'
             }}
             transition={{ type: 'spring', stiffness: 400 }}
           >
@@ -133,7 +105,7 @@ const About = () => {
               className="grid grid-cols-2 gap-6"
             >
               <motion.div 
-                className="bg-white/90 p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-400 group relative overflow-hidden backdrop-blur-sm"
+                className="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-400 group relative overflow-hidden"
                 whileHover={{ y: -8 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +123,7 @@ const About = () => {
                 </div>
               </motion.div>
               <motion.div 
-                className="bg-white/90 p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-400 group relative overflow-hidden backdrop-blur-sm"
+                className="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-400 group relative overflow-hidden"
                 whileHover={{ y: -8 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +167,7 @@ const About = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.7 }}
-              className="absolute -bottom-6 -left-6 bg-white/90 p-6 rounded-xl shadow-lg border border-gray-100 max-w-xs backdrop-blur-sm"
+              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100 max-w-xs backdrop-blur-sm"
             >
               <div className="flex items-center mb-3">
                 <div className="flex -space-x-2 mr-3">
@@ -248,7 +220,7 @@ const About = () => {
           
           <motion.div 
             variants={fadeIn}
-            className="bg-white/90 rounded-2xl p-8 shadow-lg border border-gray-100 overflow-hidden relative hover:shadow-xl transition-shadow backdrop-blur-sm"
+            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 overflow-hidden relative hover:shadow-xl transition-shadow"
           >
             <div className="absolute -right-10 -top-10 w-32 h-32 bg-purple-100 rounded-full"></div>
             <div className="relative z-10">
