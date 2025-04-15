@@ -38,8 +38,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    { name: 'About', href: '#about' },
+    { name: 'Reviews', href: '#review' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -53,15 +53,22 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo/Brand */}
+
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex-shrink-0 flex items-center"
           >
-            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              YourBrand
+
+            
+            <a href="/" className="flex items-center">
+              <img 
+                src="https://www.godigitify.com/static/media/godigitify-straight.e096ec54896a0615f2cb.png" 
+                alt="GoDigitify Logo" 
+                className="h-10 object-contain" // Adjusted height and added object-contain
+              />
+
             </a>
           </motion.div>
 
